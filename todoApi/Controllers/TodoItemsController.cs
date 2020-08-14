@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
 
+// dis be fun
+
 namespace TodoApi.Controllers
 {
     [Route("api/[controller]")]
