@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
 
-// dis be fun
+// dis be fun - yaaass
 
 namespace TodoApi.Controllers
 {
