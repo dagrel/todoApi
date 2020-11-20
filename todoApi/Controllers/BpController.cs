@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+// git test
+
 namespace DipsApi.Controllers
 {
     [Route("api/[controller]")]
@@ -29,7 +31,7 @@ namespace DipsApi.Controllers
 
         // GET: api/Measurements/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<Measurement>> GetTodoItem(int id)
+        public async Task<ActionResult<Measurement>> Measurement(int id)
         {
             var measurement = await _context.Measurements.FindAsync(id);
 
@@ -44,7 +46,7 @@ namespace DipsApi.Controllers
         // PUT: api/Measurements/{id}
         
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTodoItem(int id, Measurement measurement)
+        public async Task<IActionResult> PutMeasurement(int id, Measurement measurement)
         {
             if (id != measurement.Id)
             {
@@ -74,12 +76,12 @@ namespace DipsApi.Controllers
 
         // POST: api/Measurements
                 [HttpPost]
-        public async Task<ActionResult<Measurement>> PostTodoItem(Measurement measurement)
+        public async Task<ActionResult<Measurement>> PostMeasurement(Measurement measurement)
         {
             _context.Measurements.Add(measurement);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetTodoItem), new { id = measurement.Id }, measurement);
+            return CreatedAtAction(nameof(Measurement), new { id = measurement.Id }, measurement);
         }
 
         // DELETE: api/Measurements/{id}
