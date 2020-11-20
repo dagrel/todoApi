@@ -43,7 +43,6 @@ namespace DipsApi.Controllers
             return measurement;
         }
 
-
         // POST: api/Measurements
         [HttpPost]
         public async Task<ActionResult<Measurement>> PostMeasurement(Measurement measurement)
@@ -55,7 +54,6 @@ namespace DipsApi.Controllers
         }
 
         // DELETE: api/Measurements/{id}
-        //[EnableCors("AllowAnyOrigin")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Measurement>> DeleteMeasurement(int id)
         {
