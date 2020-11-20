@@ -43,39 +43,9 @@ namespace DipsApi.Controllers
             return measurement;
         }
 
-        // PUT: api/Measurements/{id}
-        
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutMeasurement(int id, Measurement measurement)
-        {
-            if (id != measurement.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(measurement).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MeasurementExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
 
         // POST: api/Measurements
-                [HttpPost]
+        [HttpPost]
         public async Task<ActionResult<Measurement>> PostMeasurement(Measurement measurement)
         {
             _context.Measurements.Add(measurement);
