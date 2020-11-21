@@ -10,8 +10,8 @@ namespace DipsApi.Models
         public int Id { get; set; }
         public string OverPressure { get; set; }
         public string UnderPressure { get; set; }
-        //public string MeasurementDate { get; set; }
+        public string MeasurementDate { get; set; }
 
-        public DateTime MeasurementDate { get; set; }
+        //public DateTime MeasurementDate { get; set; }
     }
 }

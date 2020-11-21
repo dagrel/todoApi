@@ -1,0 +1,28 @@
+I denne løsningen har jeg laget et API ved hjelp av .Net core 3.1. Api'et benytter seg av
+REST metodikk. Har her implementert Post metode for lagring av blodtrykk. 
+Delete metode for sletting av blodtrykk. 
+Har også metode for å hente en spesifikk måling (ved hjelp av ID), men dette er ikke benyttet
+i brukergrensesnittet.
+Api'et må kjøres gjennom feks Visual Studio, eller en annen IDE. Den benytter seg av en enkel Entity Framework
+In-memory test database. Et naturlig videre steg ville vært å lage en bedre tilhørende database.
+ 
+Har forsøkt å starte å lage en integrasjonstest som skal teste http kallene. Har derimot ikke vært borti
+så mye testing gjennom .Net core før, så er dessverre ikke helt i mål med dette, men skjønner prinsippene,
+og med noe mer tid skulle jeg ha løst dette. Valgte integrasjonstest istedenfor unit tester på bakgrunn
+av at majoriteten av det jeg har lest meg opp på, anbefaler dette til Api'er.
+  
+I tillegg har jeg laget et enkelt brukergrenssnitt i React med hjelp av en Bootstrap/MaterialUI template. 
+Der har vi en enkel tabell komponent og en "legg til ny måling" komponent. 
+Koden her ligger under src/components/Dips - Har ikke fokusert alt for mye på dette så det er enkelte feil,
+som feks velging av dato ved oppretting av ny måling som ikke er helt som den skal. 
+I tabellen er det mulighet for å sortere og filtrere på dato, overtrykk og undertrykk, men er dessverre
+ikke helt i mål enda med datoen, så den vises per nå ikke i tabellen. 
+En annen liten feil i klientappen er at den ikke re-renderer når en oppføring blir slettet, så da må
+man manuelt refreshe siden for at den skal forsvinne. 
+
+For å kjøre brukergrensesnittet kreves nodejs installert på maskinen.
+Gjennom en konsoll kan man finne fram til ClientApp mappen, og så kjøre "npm install" for å installere 
+nødvendige pakker. Når dette er gjort kan man kjøre "npm start", klientappen vil da starte i nettleseren.
+
+Brukte litt for lang tid på undersøking av testing av koden, så har ikke kommet i mål med "bonuspoengene",
+men hadde relativt greit fått dette til i brukergrensesnittet.  
